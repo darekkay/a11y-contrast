@@ -1,0 +1,112 @@
+{
+  "gray": {
+    "gray-10": "#f7fafc",
+    "gray-20": "#edf2f7",
+    "gray-30": "#e2e8f0",
+    "gray-40": "#cbd5e0",
+    "gray-50": "#a0aec0",
+    "gray-60": "#718096",
+    "gray-70": "#4a5568",
+    "gray-80": "#2d3748",
+    "gray-90": "#1a202c"
+  },
+  "red": {
+    "red-10": "#fff5f5",
+    "red-20": "#fed7d7",
+    "red-30": "#feb2b2",
+    "red-40": "#fc8181",
+    "red-50": "#f56565",
+    "red-60": "#e53e3e",
+    "red-70": "#c53030",
+    "red-80": "#9b2c2c",
+    "red-90": "#742a2a"
+  },
+  "orange": {
+    "orange-10": "#fffaf0",
+    "orange-20": "#feebc8",
+    "orange-30": "#fbd38d",
+    "orange-40": "#f6ad55",
+    "orange-50": "#ed8936",
+    "orange-60": "#dd6b20",
+    "orange-70": "#c05621",
+    "orange-80": "#9c4221",
+    "orange-90": "#7b341e"
+  },
+  "yellow": {
+    "yellow-10": "#fffff0",
+    "yellow-20": "#fefcbf",
+    "yellow-30": "#faf089",
+    "yellow-40": "#f6e05e",
+    "yellow-50": "#ecc94b",
+    "yellow-60": "#d69e2e",
+    "yellow-70": "#b7791f",
+    "yellow-80": "#975a16",
+    "yellow-90": "#744210"
+  },
+  "green": {
+    "green-10": "#f0fff4",
+    "green-20": "#c6f6d5",
+    "green-30": "#9ae6b4",
+    "green-40": "#68d391",
+    "green-50": "#48bb78",
+    "green-60": "#38a169",
+    "green-70": "#2f855a",
+    "green-80": "#276749",
+    "green-90": "#22543d"
+  },
+  "teal": {
+    "teal-10": "#e6fffa",
+    "teal-20": "#b2f5ea",
+    "teal-30": "#81e6d9",
+    "teal-40": "#4fd1c5",
+    "teal-50": "#38b2ac",
+    "teal-60": "#319795",
+    "teal-70": "#2c7a7b",
+    "teal-80": "#285e61",
+    "teal-90": "#234e52"
+  },
+  "blue": {
+    "blue-10": "#ebf8ff",
+    "blue-20": "#bee3f8",
+    "blue-30": "#90cdf4",
+    "blue-40": "#63b3ed",
+    "blue-50": "#4299e1",
+    "blue-60": "#3182ce",
+    "blue-70": "#2b6cb0",
+    "blue-80": "#2c5282",
+    "blue-90": "#2a4365"
+  },
+  "indigo": {
+    "indigo-10": "#ebf4ff",
+    "indigo-20": "#c3dafe",
+    "indigo-30": "#a3bffa",
+    "indigo-40": "#7f9cf5",
+    "indigo-50": "#667eea",
+    "indigo-60": "#5a67d8",
+    "indigo-70": "#4c51bf",
+    "indigo-80": "#434190",
+    "indigo-90": "#3c366b"
+  },
+  "purple": {
+    "purple-10": "#faf5ff",
+    "purple-20": "#e9d8fd",
+    "purple-30": "#d6bcfa",
+    "purple-40": "#b794f4",
+    "purple-50": "#9f7aea",
+    "purple-60": "#805ad5",
+    "purple-70": "#6b46c1",
+    "purple-80": "#553c9a",
+    "purple-90": "#44337a"
+  },
+  "pink": {
+    "pink-10": "#fff5f7",
+    "pink-20": "#fed7e2",
+    "pink-30": "#fbb6ce",
+    "pink-40": "#f687b3",
+    "pink-50": "#ed64a6",
+    "pink-60": "#d53f8c",
+    "pink-70": "#b83280",
+    "pink-80": "#97266d",
+    "pink-90": "#702459"
+  }
+}

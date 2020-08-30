@@ -1,0 +1,54 @@
+{
+  "name": "a11y-contrast",
+  "description": "Create a color palette report",
+  "version": "1.0.0",
+  "author": "Darek Kay <hello@darekkay.com> (https://darekkay.com/)",
+  "bin": {
+    "a11y-contrast": "bin/a11y-contrast.js"
+  },
+  "dependencies": {
+    "@darekkay/logger": "1.0.2",
+    "kleur": "4.0.2",
+    "onecolor": "3.1.0",
+    "sywac": "1.3.0"
+  },
+  "devDependencies": {
+    "@darekkay/eslint-config": "2.1.2",
+    "cross-env": "7.0.2",
+    "eslint": "7.5.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-unicorn": "21.0.0",
+    "jest": "26.1.0",
+    "prettier": "2.0.5"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "keywords": [
+    "a11y",
+    "accessibility",
+    "accessible",
+    "color",
+    "colors",
+    "contrast",
+    "contrast ratio",
+    "palette",
+    "wcag"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "ci": "cross-env CI=true npm run lint && npm run test",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prepublishOnly": "npm run ci",
+    "start": "node ./bin/a11y-contrast.js examples/uswds.json",
+    "test": "jest"
+  }
+}

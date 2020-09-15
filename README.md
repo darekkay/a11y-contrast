@@ -1,5 +1,7 @@
 # A11y Contrast
 
+![npm](https://img.shields.io/npm/v/a11y-contrast?style=flat-square) [![Travis](https://img.shields.io/travis/com/darekkay/a11y-contrast?style=flat-square)](https://travis-ci.com/darekkay/a11y-contrast) [![license](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/darekkay/a11y-contrast/blob/master/LICENSE)
+
 A CLI utility to calculate/verify accessible [magic numbers](https://designsystem.digital.gov/design-tokens/color/overview/#magic-number) for a color palette.
 
 ## Installation

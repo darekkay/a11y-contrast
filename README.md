@@ -4,6 +4,8 @@
 
 A CLI utility to calculate/verify accessible [magic numbers](https://designsystem.digital.gov/design-tokens/color/overview/#magic-number) for a color palette.
 
+![](screenshot.png)
+
 ## Installation
 
 This tool requires Node.js version 12+.

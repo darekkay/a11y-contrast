@@ -41,7 +41,7 @@
     "wcag"
   ],
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "bin/a11y-contrast.js",
   "scripts": {
     "ci": "cross-env CI=true npm run lint && npm run test",
     "format": "prettier --write .",

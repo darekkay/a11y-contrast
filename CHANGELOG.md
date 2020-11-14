@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 
+- :rocket: Ignore invalid colors.
 - :hammer: Replace TravisCI with GitHub Actions.
 
 ## [1.1.0] - 2020-10-28

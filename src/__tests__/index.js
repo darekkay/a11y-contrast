@@ -1,3 +1,4 @@
+const onecolor = require("onecolor");
 const { isFlat, flattenPalette, normalizePalette } = require("../index");
 
 const flatPalette = {
@@ -27,13 +28,13 @@ const nestedPalette = {
 };
 
 const normalizedPalette = [
-  { family: "light-blue", grade: 10, hex: "#d9e8f6" },
-  { family: "light-blue", grade: 20, hex: "#aacdec" },
-  { family: "green", grade: 10, hex: "#dfeacd" },
-  { family: "green", grade: 20, hex: "#b8d293" },
-  { family: "white", grade: 0, hex: "#ffffff" },
-  { family: "black", grade: 100, hex: "#000000" },
-];
+  { family: "light-blue", grade: 10, value: "#d9e8f6" },
+  { family: "light-blue", grade: 20, value: "#aacdec" },
+  { family: "green", grade: 10, value: "#dfeacd" },
+  { family: "green", grade: 20, value: "#b8d293" },
+  { family: "white", grade: 0, value: "#ffffff" },
+  { family: "black", grade: 100, value: "#000000" },
+].map((color) => ({ ...color, onecolorValue: onecolor(color.value) }));
 
 test("isFlat returns true for flat color palette definition", () => {
   expect(isFlat(flatPalette)).toBe(true);

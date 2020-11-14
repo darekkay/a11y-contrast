@@ -23,7 +23,7 @@ const verifyContrastRatio = (palette, magicNumber) => {
 
   palette.forEach((color1) => {
     palette.forEach((color2) => {
-      const contrastRatio = onecolor(color1.hex).contrast(onecolor(color2.hex));
+      const contrastRatio = color1.onecolorValue.contrast(color2.onecolorValue);
 
       if (color1.grade > color2.grade) {
         return; // don't compare same colors to each other
@@ -68,28 +68,41 @@ const flattenPalette = (nestedPalette) =>
     {}
   );
 
-/** Create an array of { family, grade, hex } values */
+/** Create an array of { family, grade, value } values */
 const normalizePalette = (flatPalette) =>
   Object.entries(flatPalette).reduce(
-    (accumulator2, [name, hex]) => [
+    (accumulator2, [name, value]) => [
       ...accumulator2,
       {
         family: name.substring(0, name.lastIndexOf("-")),
         grade: parseInt(name.substring(name.lastIndexOf("-") + 1), 10),
-        hex,
+        value,
+        onecolorValue: onecolor(value.trim()),
       },
     ],
     []
   );
+
+const removeInvalidColors = (palette) => {
+  return palette.filter((color) => {
+    if (!color.onecolorValue) {
+      logger.error(
+        `Color ${color.family}-${color.grade} is invalid: '${color.value}'`
+      );
+    }
+    return !!color.onecolorValue;
+  });
+};
 
 const run = (colors, config) => {
   logger.info(`${green("Analyzing")}: ${config.file}`);
 
   const flatPalette = isFlat(colors) ? colors : flattenPalette(colors);
   const normalizedPalette = normalizePalette(flatPalette);
-  const magicNumbers = calculateMagicNumbers(normalizedPalette);
+  const validPalette = removeInvalidColors(normalizedPalette);
+  const magicNumbers = calculateMagicNumbers(validPalette);
 
-  logger.log(`${green("Colors:")} ${normalizedPalette.length}`);
+  logger.log(`${green("Colors:")} ${validPalette.length}`);
   logger.log(green("Magic numbers:"));
   Object.entries(magicNumbers).forEach(([grade, magicNumber]) => {
     logger.log(

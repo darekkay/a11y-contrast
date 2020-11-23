@@ -4,6 +4,7 @@
 
 - :rocket: Ignore invalid colors.
 - :rocket: Don't calculate unnecessary contrast ratios.
+- :rocket: Display the mean contrast ratio of a color palette.
 - :hammer: Replace TravisCI with GitHub Actions.
 
 ## [1.1.0] - 2020-10-28

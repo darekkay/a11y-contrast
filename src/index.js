@@ -23,7 +23,7 @@ const verifyContrastRatio = (palette, magicNumber) => {
 
   palette.forEach((color1) => {
     palette.forEach((color2) => {
-      if (color1.grade > color2.grade) {
+      if (color1.grade > color2.grade || color1 === color2) {
         return; // don't compare same colors to each other
       }
 
@@ -94,6 +94,25 @@ const removeInvalidColors = (palette) => {
   });
 };
 
+const calculateMeanContrastRatio = (palette) => {
+  let mean = 0;
+  let count = 0;
+
+  palette.forEach((color1) => {
+    palette.forEach((color2) => {
+      if (color1.grade > color2.grade || color1 === color2) {
+        return; // don't compare same colors to each other
+      }
+
+      const contrastRatio = color1.onecolorValue.contrast(color2.onecolorValue);
+      count++;
+      mean += (contrastRatio - mean) / count;
+    });
+  });
+
+  return Math.round(mean * 1000) / 1000;
+};
+
 const run = (colors, config) => {
   logger.info(`${green("Analyzing")}: ${config.file}`);
 
@@ -103,6 +122,11 @@ const run = (colors, config) => {
   const magicNumbers = calculateMagicNumbers(validPalette);
 
   logger.log(`${green("Colors:")} ${validPalette.length}`);
+  logger.log(
+    `${green("Mean contrast ratio:")} ${calculateMeanContrastRatio(
+      validPalette
+    )}`
+  );
   logger.log(green("Magic numbers:"));
   Object.entries(magicNumbers).forEach(([grade, magicNumber]) => {
     logger.log(

@@ -48,7 +48,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prepublishOnly": "npm run ci",
-    "start": "node ./bin/a11y-contrast.js examples/uswds.json",
+    "start": "node ./bin/a11y-contrast.js examples/open-color.json --combinations",
     "test": "jest"
   }
 }

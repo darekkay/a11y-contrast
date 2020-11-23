@@ -23,11 +23,11 @@ const verifyContrastRatio = (palette, magicNumber) => {
 
   palette.forEach((color1) => {
     palette.forEach((color2) => {
-      const contrastRatio = color1.onecolorValue.contrast(color2.onecolorValue);
-
       if (color1.grade > color2.grade) {
         return; // don't compare same colors to each other
       }
+
+      const contrastRatio = color1.onecolorValue.contrast(color2.onecolorValue);
 
       if (Math.abs(color1.grade - color2.grade) >= magicNumber.value) {
         if (contrastRatio < magicNumber.ratio) {
@@ -94,6 +94,25 @@ const removeInvalidColors = (palette) => {
   });
 };
 
+const calculateValidColorCombinations = (palette, ratio) => {
+  const combinations = [];
+
+  palette.forEach((color1) => {
+    palette.forEach((color2) => {
+      if (color1.grade > color2.grade) {
+        return; // don't compare same colors to each other
+      }
+
+      const contrastRatio = color1.onecolorValue.contrast(color2.onecolorValue);
+      if (contrastRatio > ratio) {
+        combinations.push([color1.value, color2.value]);
+      }
+    });
+  });
+
+  return combinations;
+};
+
 const run = (colors, config) => {
   logger.info(`${green("Analyzing")}: ${config.file}`);
 
@@ -132,6 +151,12 @@ const run = (colors, config) => {
       }
     }
   });
+
+  if (config.combinations) {
+    logger.log(green("Valid color combinations:"));
+    const combinations = calculateValidColorCombinations(validPalette, 4.5);
+    combinations.forEach((combination) => logger.log(combination));
+  }
 
   logger.log(); // new line at the end
 

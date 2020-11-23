@@ -11,7 +11,8 @@ cli
   .positional("<file>", { paramsDesc: "Color palette file" })
   .number("--min-ratio-3", { desc: "Verify magic number for ratio 3" })
   .number("--min-ratio-4.5", { desc: "Verify magic number for ratio 4.5" })
-  .number("--min-ratio-7", { desc: "Verify magic number for ratio 7" });
+  .number("--min-ratio-7", { desc: "Verify magic number for ratio 7" })
+  .boolean("--combinations", { desc: "Calculate valid color combinations" });
 enhance(cli);
 
 module.exports = index;

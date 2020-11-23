@@ -23,11 +23,11 @@ const verifyContrastRatio = (palette, magicNumber) => {
 
   palette.forEach((color1) => {
     palette.forEach((color2) => {
-      const contrastRatio = color1.onecolorValue.contrast(color2.onecolorValue);
-
       if (color1.grade > color2.grade) {
         return; // don't compare same colors to each other
       }
+
+      const contrastRatio = color1.onecolorValue.contrast(color2.onecolorValue);
 
       if (Math.abs(color1.grade - color2.grade) >= magicNumber.value) {
         if (contrastRatio < magicNumber.ratio) {

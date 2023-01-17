@@ -1,7 +1,7 @@
 # A11y Contrast
 
 ![npm](https://img.shields.io/npm/v/a11y-contrast?style=flat-square)
-[![Build](https://img.shields.io/github/workflow/status/darekkay/a11y-contrast/Continuous%20Integration/master?style=flat-square)](https://github.com/darekkay/a11y-contrast/actions)
+[![Build](https://img.shields.io/github/actions/workflow/status/darekkay/a11y-contrast/ci.yml?branch=master&style=flat-square)](https://github.com/darekkay/a11y-contrast/actions/workflows/ci.yml)
 [![license](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/darekkay/a11y-contrast/blob/master/LICENSE)
 
 A CLI utility to calculate/verify accessible [magic numbers](https://designsystem.digital.gov/design-tokens/color/overview/#magic-number) for a color palette. Read [my blog post](https://darekkay.com/blog/accessible-color-palette/) for some more information.

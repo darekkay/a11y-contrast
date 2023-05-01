@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [2.0.0] - 2023-05-01
+
 - :boom: Drop Node 14 support ([end of life](https://github.com/nodejs/release#release-schedule)).
 - :hammer: Update dependencies.
 
@@ -22,7 +24,8 @@
 
 - :tada: Initial release.
 
-[Unreleased]: https://github.com/darekkay/a11y-contrast/compare/1.2.0...HEAD
+[unreleased]: https://github.com/darekkay/a11y-contrast/compare/2.0.0...HEAD
+[2.0.0]: https://github.com/darekkay/a11y-contrast/compare/1.2.0...2.0.0
 [1.2.0]: https://github.com/darekkay/a11y-contrast/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/darekkay/a11y-contrast/compare/1.0.0...1.1.0
 [1.0.0]: https://github.com/darekkay/a11y-contrast/releases/tag/1.0.0

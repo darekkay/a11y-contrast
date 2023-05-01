@@ -20,7 +20,7 @@ async function main() {
   const argv = await cli.parseAndExit();
 
   try {
-    const fileContent = readFileSync(argv.file, "utf-8");
+    const fileContent = readFileSync(argv.file, "utf8");
     index.run(JSON.parse(fileContent), argv);
   } catch (error) {
     logger.error(error.message);

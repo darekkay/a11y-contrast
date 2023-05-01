@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 
+- :boom: Drop Node 14 support ([end of life](https://github.com/nodejs/release#release-schedule)).
 - :hammer: Update dependencies.
 
 ## [1.2.0] - 2020-11-23

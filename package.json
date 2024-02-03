@@ -1,7 +1,7 @@
 {
   "name": "a11y-contrast",
   "description": "Create a color palette report",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "author": "Darek Kay <hello@darekkay.com> (https://darekkay.com/)",
   "bin": {
     "a11y-contrast": "bin/a11y-contrast.js"

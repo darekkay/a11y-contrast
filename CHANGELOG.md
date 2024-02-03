@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [3.0.0] - 2024-02-03
+
 - :boom: Drop Node 16 support ([end of life](https://github.com/nodejs/release#release-schedule)).
 - :rocket: Support custom grade intervals.
 - :hammer: Update GitHub Action versions.
@@ -29,7 +31,8 @@
 
 - :tada: Initial release.
 
-[unreleased]: https://github.com/darekkay/a11y-contrast/compare/2.0.0...HEAD
+[unreleased]: https://github.com/darekkay/a11y-contrast/compare/3.0.0...HEAD
+[3.0.0]: https://github.com/darekkay/a11y-contrast/compare/2.0.0...3.0.0
 [2.0.0]: https://github.com/darekkay/a11y-contrast/compare/1.2.0...2.0.0
 [1.2.0]: https://github.com/darekkay/a11y-contrast/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/darekkay/a11y-contrast/compare/1.0.0...1.1.0

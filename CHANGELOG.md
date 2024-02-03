@@ -3,6 +3,7 @@
 ## [Unreleased]
 
 - :boom: Drop Node 16 support ([end of life](https://github.com/nodejs/release#release-schedule)).
+- :hammer: Update GitHub Action versions.
 
 ## [2.0.0] - 2023-05-01
 

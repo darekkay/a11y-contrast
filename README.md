@@ -15,15 +15,15 @@ This tool requires Node.js version 18+.
 Install globally:
 
 ```bash
-$ yarn add -g a11y-contrast     # Yarn
 $ npm install -g a11y-contrast  # Npm
+$ yarn add -g a11y-contrast     # Yarn
 ```
 
 Or install as a local dependency:
 
 ```bash
-$ yarn add a11y-contrast            # Yarn
 $ npm install --save a11y-contrast  # Npm
+$ yarn add a11y-contrast            # Yarn
 ```
 
 Or use without installing:

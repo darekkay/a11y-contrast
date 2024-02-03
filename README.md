@@ -10,7 +10,7 @@ A CLI utility to calculate/verify accessible [magic numbers](https://designsyste
 
 ## Installation
 
-This tool requires Node.js version 12+.
+This tool requires Node.js version 18+.
 
 Install globally:
 

@@ -3,6 +3,7 @@
 ## [Unreleased]
 
 - :boom: Drop Node 16 support ([end of life](https://github.com/nodejs/release#release-schedule)).
+- :rocket: Support custom grade intervals.
 - :hammer: Update GitHub Action versions.
 - :hammer: Update dependencies.
 

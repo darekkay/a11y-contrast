@@ -40,16 +40,42 @@ const verifyContrastRatio = (palette, magicNumber) => {
   return violations;
 };
 
-const calculateMagicNumbers = (palette) => {
-  const magicNumbers = {};
+const getPaletteParameters = (palette) => {
+  const grades = palette.map((color) => color.grade);
+  const min = Math.min(...grades);
+  const max = Math.max(...grades);
+  let step = Infinity;
 
+  for (let i = 0; i < grades.length; i++) {
+    for (let j = 0; j < grades.length; j++) {
+      if (grades[i] !== grades[j]) {
+        step = Math.min(step, Math.abs(grades[i] - grades[j]));
+      }
+    }
+  }
+
+  if (step === Infinity) {
+    throw new Error("Color palette must include different color grades.");
+  }
+
+  return {
+    min,
+    max,
+    step,
+  };
+};
+
+const calculateMagicNumbers = (palette) => {
+  const { min, max, step } = getPaletteParameters(palette);
+
+  const magicNumbers = {};
   Object.entries(ratios).forEach(([level, { minRatio }]) => {
-    for (let i = 10; i < 100; i += 10) {
+    for (let i = min; i <= max; i += step) {
       const violations = verifyContrastRatio(palette, {
         value: i,
         ratio: minRatio,
       });
-      if (violations.length === 0) {
+      if (violations.length === 0 && i !== 0) {
         magicNumbers[level] = i;
         return;
       }

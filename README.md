@@ -65,7 +65,7 @@ $ a11y-contrast <file> --min-ratio-3=40 --min-ratio-4.5=50 --min-ratio-7=70
 
 ## Color palette format
 
-This tool handles flat or nested JSON files with color grades between 0 and 100.
+This tool handles flat or nested JSON files. Any consistent grading system is supported.
 
 - Flat JSON:
 
@@ -85,14 +85,14 @@ This tool handles flat or nested JSON files with color grades between 0 and 100.
 ```json
 {
   "blue": {
-    "blue-10": "#d9e8f6",
-    "blue-20": "#aacdec",
-    "blue-30": "#73b3e7"
+    "blue-100": "#d9e8f6",
+    "blue-200": "#aacdec",
+    "blue-300": "#73b3e7"
   },
   "green": {
-    "green-10": "#dfeacd",
-    "green-20": "#b8d293",
-    "green-30": "#9bb672"
+    "green-100": "#dfeacd",
+    "green-200": "#b8d293",
+    "green-300": "#9bb672"
   }
 }
 ```

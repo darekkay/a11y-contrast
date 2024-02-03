@@ -47,6 +47,7 @@
   },
   "scripts": {
     "ci": "dks ci",
+    "dev": "node bin/a11y-contrast.js examples/black-white.json",
     "format": "dks format",
     "lint": "dks lint",
     "prepublishOnly": "npm run ci",

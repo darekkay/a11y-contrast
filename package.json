@@ -11,13 +11,13 @@
     "email": "hello@darekkay.com"
   },
   "dependencies": {
-    "@darekkay/logger": "2.0.1",
+    "@darekkay/logger": "4.0.0",
     "kleur": "4.1.5",
-    "onecolor": "4.0.0",
+    "onecolor": "4.1.0",
     "sywac": "1.3.0"
   },
   "devDependencies": {
-    "@darekkay/scripts": "2.5.0"
+    "@darekkay/scripts": "3.0.1"
   },
   "engines": {
     "node": ">=18.0.0"

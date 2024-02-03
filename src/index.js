@@ -65,7 +65,7 @@ const isFlat = (colors) => typeof Object.values(colors)[0] !== "object";
 const flattenPalette = (nestedPalette) =>
   Object.values(nestedPalette).reduce(
     (accumulator, colors) => ({ ...accumulator, ...colors }),
-    {}
+    {},
   );
 
 /** Create an array of { family, grade, value } values */
@@ -80,14 +80,14 @@ const normalizePalette = (flatPalette) =>
         onecolorValue: onecolor(value.trim()),
       },
     ],
-    []
+    [],
   );
 
 const removeInvalidColors = (palette) => {
   return palette.filter((color) => {
     if (!color.onecolorValue) {
       logger.error(
-        `Color ${color.family}-${color.grade} is invalid: '${color.value}'`
+        `Color ${color.family}-${color.grade} is invalid: '${color.value}'`,
       );
     }
     return !!color.onecolorValue;
@@ -124,15 +124,15 @@ const run = (colors, config) => {
   logger.log(`${green("Colors:")} ${validPalette.length}`);
   logger.log(
     `${green("Mean contrast ratio:")} ${calculateMeanContrastRatio(
-      validPalette
-    )}`
+      validPalette,
+    )}`,
   );
   logger.log(green("Magic numbers:"));
   Object.entries(magicNumbers).forEach(([grade, magicNumber]) => {
     logger.log(
       ` - ${cyan(
-        `Contrast ratio >= ${ratios[grade].minRatio.toString().padEnd(3)}`
-      )} : ${magicNumber} ${yellow(ratios[grade].description)}`
+        `Contrast ratio >= ${ratios[grade].minRatio.toString().padEnd(3)}`,
+      )} : ${magicNumber} ${yellow(ratios[grade].description)}`,
     );
   });
 
@@ -148,9 +148,9 @@ const run = (colors, config) => {
         violations.forEach(({ color1, color2, contrastRatio }) =>
           logger.log(
             ` - ${cyan(
-              `${color1.family}-${color1.grade} / ${color2.family}-${color2.grade}`
-            )} (${contrastRatio})`
-          )
+              `${color1.family}-${color1.grade} / ${color2.family}-${color2.grade}`,
+            )} (${contrastRatio})`,
+          ),
         );
         hasViolations = true;
       }
